@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app"></div>
+    </body>
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        console.log(nomes[0], nomes[1], nomes[2]);
+
+        var ul = document.createElement('ul');
+        var primeiroLi = document.createElement('li');
+        var segundoLi = document.createElement('li');
+        var terceiroLi = document.createElement('li');
+
+        ul.setAttribute('li', nomes[0]);
+        ul.setAttribute('li', nomes[1]);
+        ul.setAttribute('li', nomes[2]);
+
+        var primeiroElement = document.createTextNode(nomes[0]);
+        var segundoElement = document.createTextNode(nomes[1]);
+        var terceiroElement = document.createTextNode(nomes[2]);
+
+        ul.appendChild(primeiroLi);
+        ul.appendChild(segundoLi);
+        ul.appendChild(terceiroLi);
+
+        primeiroLi.appendChild(primeiroElement);
+        segundoLi.appendChild(segundoElement);
+        terceiroLi.appendChild(terceiroElement);
+
+        var containerApp = document.getElementById('app');
+        containerApp.appendChild(ul);
+    </script>
+</html>
